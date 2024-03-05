@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Family: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Roboto Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Roboto Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!--Roboto Font-->
+
+    <title>CV: Cihan Bulut</title>
+</head>
+
+<body>
+    <main>
+<!--=== Navigation: Menu, Dark Mode and Language Selection. ===-->
+        <nav>
+            <div class="left-icons">            
+                <img id="menu-icon" class="icon" src="./Media/icons8-menü.svg" width="30px" onclick="toggleSidebar()">
+
+            </div>
+            <div class="right-icons">
+                <!-- Source of mode icon changes according to light or dark mode -->
+                <img id="mode-icon" class="icon" src="./Media/icons8-sun.svg" width="30px" onclick="toggleMode()">
+                <img id="world-icon" class="icon" src="./Media/world.svg" width="30px" onclick="toggleWorld()">
+            </div>
+        </nav>
+
+        <div id="sidebar" class="hidden">
+            <a href="#">Section 1</a>
+            <a href="#">Section 2</a>
+            <a href="#">Section 3</a>
+        </div>
+        <div id="language-bar" class="hidden">
+            <a href="#">Deutsch</a>
+            <a href="#">English</a>
+            <a href="#">Français</a>
+        </div>
+          
+
+<!--=== Personal Photo: Source changes according to Light or Dark Mode ===-->
+        <div class="photo-div">
+            <img src="./Media/dark_photo.webp" alt="Bewerbungsfoto" id="photo">
+        </div>
+
+<!--=== Contact Buttons: LinkedIn, Xing & Contact Formular (Mail) ===-->
+        <div class="contact-div">
+            <button class="contact-button"><a href="http://linkedin.com">in</a></button>
+            <button class="contact-button"><a href="http://xing.com">x</a></button>
+            <button class="contact-button"><a href="#">ml</a></button>
+        </div>
+
+<!--=== Titles: Name, Online CV ===-->
+        <section id="title">
+            <h1>CIHAN BULUT</h1>
+            <h3>ONLINE CV</h3>
+        </section>
+        <hr>
+<!--=== Section 1: Berufserfahrung/ Job Experience ===-->
+        <section id="job-experience">
+            <h2>BERUFSERFAHRUNG</h2>
+            <div class="phase-box">
+                <div class="label">
+                    <p class="year">01/23 - 04/23</p>
+                    <p class="job">IT Consultant</p>
+                    <p class="company">Hessische Landesbank, Düsseldorf</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>Projektcontrolling</li>
+                        <li>PMO</li>
+                        <li>Kapazitätsplanung</li>
+                        <li>Budgetplanung & -kontrolle</li>
+                        <li>Allgemeines Onboarding</li>
+                        <li>Lizenzoptimierung & -kontrolle</li>
+                        <li>Tools: SAP 4/HANA, Jira Confluence</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <p>Test</p>
+
+
+
+        <section id="competences">
+            <div id="filtering">
+                <div id="chips"></div>
+                <input type="text" id="filterInput" placeholder="Kommagetrennt filtern...">
+            </div>
+            <div id="skills"> 
+                <span class="skill programming python coding develop">Python</span>
+                <span class="skill programming coding develop code java">Java</span>
+                <span class="skill programming data analysis numpy python coding develop code">NumPy</span>
+                <span class="skill psychologie psychology coaching communication kommunikation mensch">Coaching</span>
+            </div>
+        </section> 
+
+
+    </main>
+
+    <script src="./app.js" type="text/javascript"></script>
+</body>
+
+</html>

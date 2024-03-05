@@ -1,0 +1,208 @@
+
+
+body{
+    background-color: skyblue;
+    font-family:'Roboto', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+
+}
+
+
+main{
+    background-color: teal;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/*NAVIGATION BAR: MENU, MODE, LANGUAGE*/
+nav{
+    display: inline-flex;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+}
+.left-icons{
+    width: 100%;
+}
+.right-icons{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.icon{
+    filter: invert(100%);
+    padding: 20px 30px 0 30px;
+    cursor: pointer;
+}
+#mode-icon{
+    padding-right: 0;
+}
+#sidebar {
+    background-color: #fff;
+    position: fixed;
+    top: 10%;
+    z-index: 95;
+  }
+  #sidebar.open { /* Style for open state */
+    transform: translateX(0vw); /* Slide sidebar to view */
+    transition: transform 0.4s ease-out;
+  }
+  #sidebar.hidden{
+    transform: translateX(-100vw);
+    transition: transform 0.4s ease-out;
+  }
+  #language-bar {
+    background-color: yellow;
+    position: fixed;
+    right: 0%;
+    z-index: 95;
+  }
+  #language-bar.open { /* Style for open state */
+    opacity: 100%;
+    transform: translateY(70px); /* Slide sidebar to view */
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  }
+  #language-bar.hidden{
+    opacity: 0%;
+    transform: translateY(0%);
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  }
+  .light-mode {
+    /* Stilregeln speziell für den Dunkelmodus im Body*/
+    background-color:  #99e7f1;
+}
+/* Übergangseigenschaften für den Moduswechsel. Es können mehr hinzugefügt werden */
+main {
+    transition: background-color 1s ease;
+}
+.contact-button, .phase-box {
+    transition: background-color 1s ease;
+}
+
+
+/*PHOTO SECTION*/
+#photo{
+    display: block;
+    width: 100%;
+    min-width: 623px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/*CONTACT BUTTONS: LINKEDIN, XING, MAIL*/
+.contact-div{
+    position: static;
+    width: 60%;
+    margin: 0 auto;
+    background-color: transparent;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-evenly;
+}
+.contact-button{
+    background-color: grey;
+    border-radius: 50%;
+    width: 63px;
+    height: 63px;
+}
+
+/*ÜBERSCHRIFTEN*/
+h1,h2,h3{
+    text-align: center;
+}
+h1{
+    font-weight: 500;
+    font-size: clamp(2.3rem, 8vw, 10vw);
+    margin: 0 auto;
+}
+h2{
+    font-weight: 400;
+    font-size: clamp(1.6rem, 5.6vw, 7vw);
+}
+/* h2::before,
+h2::after {
+    display: inline-block;
+    content: "";
+    border-top: .1rem solid black;
+    width: 3rem;
+    margin: 0 1rem;
+    transform: translateY(-0.6rem);
+} */
+h3{
+    font-weight: 300;
+    font-size: clamp(1.15rem, 4vw, 5vw);
+    padding: 0;
+    margin: 0 auto 50px auto;
+}
+
+/*PHASENBOXEN: Meine Lebensabschnitte in Boxen zusammengefasst*/
+.phase-box{
+    box-sizing: border-box;
+    width: 90%;
+    height: 100%;
+    background-color: #9e619c;
+    margin: auto;
+    padding: 10px 20px;
+}
+.label{
+    cursor: pointer;
+}
+.label::before {
+    content: '\002B';
+    color: black;
+    position: absolute;
+    right: calc(5% + 20px);
+    font-size: 30px;
+  }
+  .content {
+    position: relative;
+    height: 0px;
+    text-align: justify;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* Unhides the content part when active. Sets the height */
+.phase-box.active .content {
+    height: 100%;
+  }
+  /* Changes from plus sign to negative sign once active */
+
+.phase-box.active .label::before {
+  content: '\2212';
+}
+
+/*SKILL BEREICH: Man kann in der Suchleiste nach Skills filtern*/
+
+/* styles for skills remain the same */
+
+/* Styles for chips and delete button */
+
+  
+    /*Die angezeigten Skills*/
+#skills{
+    width: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+}
+.skill{
+    max-width: 80px;
+    margin:4px;
+    background: rgba(96, 96, 210, 0.243);
+    padding:0px 4px;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    display:flex;
+}
+
+#skills span {
+    display: block; /* Initially hide all spans */
+  }
+  
